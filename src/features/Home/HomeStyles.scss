@@ -1,0 +1,13 @@
+.home-card{
+	width: 45vmax;
+	height: 60vmin;
+	background: #fff;
+	font-size: 2vmin;
+	border-radius: 1.5rem;
+
+	& container{
+		margin: 5vmin;
+		height: 100%;
+		width: 100%;
+	}
+}
