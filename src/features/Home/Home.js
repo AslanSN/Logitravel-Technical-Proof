@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { SecondaryButtonStyled } from "../Static/SecondaryButtonStyled";
-import { PrimaryButtonStyled } from "../Static/PrimaryButtonStyled";
+// import { useSelector, useDispatch } from "react-redux";
+
+import { SecondaryButtonStyled } from "../Static/Buttons/SecondaryButtonStyled";
+import { PrimaryButtonStyled } from "../Static/Buttons/PrimaryButtonStyled";
+import { Icon } from "@iconify/react";
+
 import "./HomeStyles.scss";
 
 const Home = () => {
@@ -17,9 +20,22 @@ const Home = () => {
             sapien sagittis mi, in consectetur tortor est suscipit diam.
           </p>
         </header>
-        <SecondaryButtonStyled>Reverse</SecondaryButtonStyled>
-        <SecondaryButtonStyled>DELETE</SecondaryButtonStyled>
-        <PrimaryButtonStyled>ADD</PrimaryButtonStyled>
+        <content>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </content>
+        <footer>
+          <span className="left">
+            <SecondaryButtonStyled>
+              <Icon icon="la:undo-alt" color="#324bff" width="3vmin" />
+            </SecondaryButtonStyled>
+            <SecondaryButtonStyled>DELETE</SecondaryButtonStyled>
+          </span>
+          <PrimaryButtonStyled>ADD</PrimaryButtonStyled>
+        </footer>
       </container>
     </card>
   );
