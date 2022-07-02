@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import { useSelector, useDispatch } from "react-redux";
 
-import { SecondaryButtonStyled } from "../Static/Buttons/SecondaryButtonStyled";
-import { PrimaryButtonStyled } from "../Static/Buttons/PrimaryButtonStyled";
+import { SecondaryButtonStyled } from "../Static/Styled/Buttons/SecondaryButtonStyled";
+import { PrimaryButtonStyled } from "../Static/Styled/Buttons/PrimaryButtonStyled";
 import { Icon } from "@iconify/react";
 
 import "./HomeStyles.scss";
@@ -29,8 +29,8 @@ const Home = () => {
         </content>
         <footer>
           <span className="left">
-            <SecondaryButtonStyled>
-              <Icon icon="la:undo-alt" color="#324bff" width="3vmin" />
+            <SecondaryButtonStyled className="first" width="4.5vmax">
+              <Icon icon="la:undo-alt" color="#324bff" width="2vmin" />
             </SecondaryButtonStyled>
             <SecondaryButtonStyled>DELETE</SecondaryButtonStyled>
           </span>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Tokens } from "../Tokens";
+import { Tokens } from "../../Tokens";
 
 export const PrimaryButtonStyled = styled.button`
   font-size: ${Tokens.Text.Size.buttons};

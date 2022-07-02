@@ -12,18 +12,20 @@ export const Tokens = {
       },
     },
   },
-	Background: {
+  Background: {
     white: "#fff",
     blue: "#324bff",
     darkBlue: "#003399",
+    mediumGrey: "#CCCCCC",
+    paleGrey: "#F7F7F7",
   },
   Padding: {
     button: "1vmin 2vmin 1vmin 2vmin",
   },
   Height: {
     button: "5vmin",
-	},
-	Width: {
-		button: "7vmax",
-	}
+  },
+  Width: {
+    button: "8vmax",
+  },
 };
