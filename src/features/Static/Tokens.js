@@ -14,6 +14,7 @@ export const Tokens = {
   },
   Background: {
     white: "#fff",
+    lightBlue: "rgba(177, 213, 240, 0.5)",
     blue: "#324bff",
     darkBlue: "#003399",
     mediumGrey: "#CCCCCC",

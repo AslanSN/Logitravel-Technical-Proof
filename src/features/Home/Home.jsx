@@ -1,13 +1,20 @@
-import React, { useState } from "react";
-// import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import { SecondaryButtonStyled } from "../Static/Styled/Buttons/SecondaryButtonStyled";
 import { PrimaryButtonStyled } from "../Static/Styled/Buttons/PrimaryButtonStyled";
 import { Icon } from "@iconify/react";
 
+import { toggleIsOpen } from "../reducers/modalSlice";
+
 import "./HomeStyles.scss";
+import Items from "./ItemList/Items";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  const list = useSelector((state) => state.items.itemsList);
+  const toggleOpen = () => dispatch(toggleIsOpen());
+  
   return (
     <card className="home-card">
       <container>
@@ -21,11 +28,7 @@ const Home = () => {
           </p>
         </header>
         <content>
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ul>
+          <Items/>
         </content>
         <footer>
           <span className="left">
@@ -34,7 +37,7 @@ const Home = () => {
             </SecondaryButtonStyled>
             <SecondaryButtonStyled>DELETE</SecondaryButtonStyled>
           </span>
-          <PrimaryButtonStyled>ADD</PrimaryButtonStyled>
+          <PrimaryButtonStyled onClick={toggleOpen}>ADD</PrimaryButtonStyled>
         </footer>
       </container>
     </card>
