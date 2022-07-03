@@ -3,7 +3,7 @@ import { Tokens } from "../../Static/Tokens";
 
 export const ItemStyled = styled.li`
   font-size: ${Tokens.Text.Size.p};
-  width: 98.5%;
+  width: 98%;
   margin: 0.2rem 0rem;
   text-align: initial;
   border-radius: 0.2rem;
