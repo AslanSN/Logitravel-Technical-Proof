@@ -29,6 +29,7 @@
       background-color: #f7f7f7;
       border: 1px solid #dfdfdf;
       height: calc(0.5rem + 20vmin);
+      overflow-y: auto;
 
       & ul {
         list-style: none;
@@ -38,6 +39,7 @@
         flex-wrap: nowrap;
 				padding: 2vmin;
 				margin: 0;
+        padding: 0.5vmin 2vmin;
       }
     }
 

@@ -11,8 +11,7 @@ export const SecondaryButtonStyled = styled.button`
   background-color: ${Tokens.Background.white};
   transition: background-color 0.1s ease-in-out;
 
-  :hover,
-  :focus {
+  :hover {
     background-color: ${Tokens.Background.blue};
     color: ${Tokens.Text.Color.Button.white};
   }

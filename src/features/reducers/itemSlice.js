@@ -13,14 +13,17 @@ export const itemSlice = createSlice({
     isInitiated: false,
   },
   reducers: {
-    toggleSelectedOf: (state, action) =>{
+    /**
+     * ! Toggles the selection of an item
+     * * AslanSN - 22-07-03
+     */
+    toggleSelectedOf: (state, action) => {
       const item = state.itemsList[action.payload];
       item.selected = !item.selected;
     },
     /**
-     *
-     * @param {*} state
-     * @param {*} action
+     * ! Adds an item to itemsList
+     * * AslanSN - 22-07-03
      */
     addItem: (state, action) => {
       const content = action.payload,
@@ -42,9 +45,15 @@ export const itemSlice = createSlice({
         }
       }
     },
+
+    deleteSelected: (state) => {
+      console.log(state.itemsList);
+      state.itemsList = state.itemsList.filter((item) => !item.selected);
+      console.log(state.itemsList);
+    },
   },
 });
 
-export const { toggleSelectedOf, addItem } = itemSlice.actions;
+export const { toggleSelectedOf, addItem, deleteSelected } = itemSlice.actions;
 
 export default itemSlice.reducer;

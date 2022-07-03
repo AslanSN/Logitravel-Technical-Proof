@@ -6,6 +6,7 @@ import { PrimaryButtonStyled } from "../Static/Styled/Buttons/PrimaryButtonStyle
 import { Icon } from "@iconify/react";
 
 import { toggleIsOpen } from "../reducers/modalSlice";
+import { deleteSelected } from "../reducers/itemSlice.js";
 
 import "./HomeStyles.scss";
 import Items from "./ItemList/Items";
@@ -14,7 +15,8 @@ const Home = () => {
   const dispatch = useDispatch();
   const list = useSelector((state) => state.items.itemsList);
   const toggleOpen = () => dispatch(toggleIsOpen());
-  
+  const deletion = () => dispatch(deleteSelected());
+
   return (
     <card className="home-card">
       <container>
@@ -35,7 +37,7 @@ const Home = () => {
             <SecondaryButtonStyled className="first" width="4.5vmax">
               <Icon icon="la:undo-alt" color="#324bff" width="2vmin" />
             </SecondaryButtonStyled>
-            <SecondaryButtonStyled>DELETE</SecondaryButtonStyled>
+            <SecondaryButtonStyled onClick={deletion}>DELETE</SecondaryButtonStyled>
           </span>
           <PrimaryButtonStyled onClick={toggleOpen}>ADD</PrimaryButtonStyled>
         </footer>
