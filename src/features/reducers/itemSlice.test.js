@@ -1,12 +1,13 @@
-import itemReducer, { toggleSelectedOf, addItem } from "./itemSlice";
+import itemReducer, { individualDeletion } from "./itemSlice";
 
-describe("item reducer", () => {
-  it("should toggle selection", () => {
+describe("items", () => {
+  it("delete the item", () => {
     const item = {
       content: "anything",
+      id: 0,
       selected: false,
     };
-    const actual = itemReducer(toggleSelectedOf(item));
-    expect(actual.selected.toEqual(true));
+    const actual = itemReducer(individualDeletion(item.id));
+    expect(actual).toEqual([]);
   });
 });

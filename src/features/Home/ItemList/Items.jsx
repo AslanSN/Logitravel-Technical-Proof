@@ -1,6 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleSelectedOf } from "../../reducers/itemSlice.js";
+import {
+  toggleSelectedOf,
+  individualDeletion,
+} from "../../reducers/itemSlice.js";
 import { ItemStyled } from "./ItemStyled.js";
 
 const Items = () => {
@@ -10,6 +13,9 @@ const Items = () => {
     // console.log(id);
     dispatch(toggleSelectedOf(id));
   };
+  const deletion = (id) => {
+    dispatch(individualDeletion(id));
+  };
 
   return (
     <ul>
@@ -17,7 +23,8 @@ const Items = () => {
         <ItemStyled
           className={item.selected ? "selected" : null}
           key={item.id}
-          onClick={() => selected(item.id)}>
+          onClick={() => selected(item.id)}
+          onDoubleClick={() => deletion(item.id)}>
           {item.content}
         </ItemStyled>
       ))}

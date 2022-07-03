@@ -45,15 +45,26 @@ export const itemSlice = createSlice({
         }
       }
     },
-
+    /**
+     * ! Erases all the selected items of the list
+     * * AslanSN - 22-07-03
+     */
     deleteSelected: (state) => {
-      console.log(state.itemsList);
       state.itemsList = state.itemsList.filter((item) => !item.selected);
-      console.log(state.itemsList);
+    },
+    /**
+     * ! Erases on double click the item selected
+     * * AslanSN - 22-07-03
+     */
+    individualDeletion: (state, action) => {
+      state.itemsList = state.itemsList.filter(
+        (item) => item !== state.itemsList[action.payload]
+      );
     },
   },
 });
 
-export const { toggleSelectedOf, addItem, deleteSelected } = itemSlice.actions;
+export const { toggleSelectedOf, addItem, deleteSelected, individualDeletion } =
+  itemSlice.actions;
 
 export default itemSlice.reducer;
