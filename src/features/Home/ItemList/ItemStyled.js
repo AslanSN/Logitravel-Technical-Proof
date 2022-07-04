@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Tokens } from "../../Static/Tokens";
-
+/**
+ * ! Styled Component
+ * * AslanSN - 22-07-03
+ * @returns Styled Component - styled library
+ */
 export const ItemStyled = styled.li`
   font-size: ${Tokens.Text.Size.p};
   width: 98%;

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Tokens } from "../../Tokens";
-
+/**
+ * ! Button - Primary
+ * * AslanSN - 22-07-02
+ * @returns Styled Component - styled library
+ */
 export const PrimaryButtonStyled = styled.button`
   font-size: ${Tokens.Text.Size.buttons};
   width: ${Tokens.Width.button};

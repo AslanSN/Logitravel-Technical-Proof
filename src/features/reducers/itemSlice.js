@@ -3,9 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialListValue = {
   content: "Add your item here...",
   id: 0,
-  selected: false,
+  isSelected: false,
 };
-
+/**
+ * ! REDUCERS - Item Slice - UNDOABLE
+ * * AslanSN - 22-07-02
+ */
 export const itemSlice = createSlice({
   name: "items",
   initialState: {
@@ -19,7 +22,7 @@ export const itemSlice = createSlice({
      */
     toggleSelectedOf: (state, action) => {
       const item = state.itemsList[action.payload];
-      item.selected = !item.selected;
+      item.isSelected = !item.isSelected;
     },
     /**
      * ! Adds an item to itemsList
@@ -32,7 +35,7 @@ export const itemSlice = createSlice({
       let newItem = {
         content: content,
         id: 0,
-        selected: false,
+        isSelected: false,
       };
 
       if (content !== "") {
@@ -50,7 +53,7 @@ export const itemSlice = createSlice({
      * * AslanSN - 22-07-03
      */
     deleteSelected: (state) => {
-      state.itemsList = state.itemsList.filter((item) => !item.selected);
+      state.itemsList = state.itemsList.filter((item) => !item.isSelected);
     },
     /**
      * ! Erases on double click the item selected

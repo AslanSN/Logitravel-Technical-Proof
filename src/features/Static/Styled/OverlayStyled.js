@@ -1,5 +1,9 @@
 import styled from "styled-components";
-
+/**
+ * ! Overlay
+ * * AslanSN - 22-07-03
+ * @returns Styled Component - styled library
+ */
 export const Overlay = styled.div`
   width: 100vw;
   height: 100vh;

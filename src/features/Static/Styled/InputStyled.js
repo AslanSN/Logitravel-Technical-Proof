@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Tokens } from "../Tokens";
-
+/**
+ * ! Input
+ * * AslanSN - 22-07-02
+ * @returns Styled Component - styled library
+ */
 export const InputStyled = styled.input`
   font-size: ${Tokens.Text.Size.p};
   width: calc(1rem + 30vmax);

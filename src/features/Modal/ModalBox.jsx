@@ -1,18 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleIsOpen } from "../reducers/modalSlice.js";
-import { addItem, generateId } from "../reducers/itemSlice.js";
-
+import React from "react";
+import { useDispatch } from "react-redux";
+//Components
 import { PrimaryButtonStyled } from "../Static/Styled/Buttons/PrimaryButtonStyled";
 import { SecondaryButtonStyled } from "../Static/Styled/Buttons/SecondaryButtonStyled";
 import { InputStyled } from "../Static/Styled/InputStyled";
 import { Overlay } from "../Static/Styled/OverlayStyled";
-
+//Reducers
+import { toggleIsOpen } from "../reducers/modalSlice.js";
+import { addItem } from "../reducers/itemSlice.js";
+//Styles
 import "./ModalBoxStyles.scss";
-
+/**
+ * ! Component
+ * * AslanSN - 22-07-02
+ * @returns COMPONENT - React
+ */
 const ModalBox = () => {
   const dispatch = useDispatch();
-
+  /**
+   * ! Submitter
+   * ? Submits an item received from the input
+   * @param {object} evt - Event
+   */
   const submitItem = (evt) => {
     evt.preventDefault();
 
@@ -23,7 +32,6 @@ const ModalBox = () => {
     dispatch(addItem(content));
     dispatch(toggleIsOpen());
   };
-
 
   return (
     <Overlay>
@@ -36,7 +44,6 @@ const ModalBox = () => {
               type="text"
               placeholder="Type your item here..."
             />
-
             <footer>
               <PrimaryButtonStyled type="submit">ADD</PrimaryButtonStyled>
               <SecondaryButtonStyled onClick={() => dispatch(toggleIsOpen())}>

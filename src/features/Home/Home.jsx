@@ -15,8 +15,7 @@ import "./HomeStyles.scss";
 /**
  * ! HOME - Container
  * * AslanSN - 22-07-02
- *
- *
+ * @returns Component - React
  */
 const Home = () => {
   const dispatch = useDispatch();
