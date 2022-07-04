@@ -67,4 +67,6 @@ export const itemSlice = createSlice({
 export const { toggleSelectedOf, addItem, deleteSelected, individualDeletion } =
   itemSlice.actions;
 
+export const selectItem = (state) => state.items.present.itemsList;
+
 export default itemSlice.reducer;

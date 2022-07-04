@@ -3,12 +3,13 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   toggleSelectedOf,
   individualDeletion,
+  selectItem,
 } from "../../reducers/itemSlice.js";
 import { ItemStyled } from "./ItemStyled.js";
 
 const Items = () => {
   const dispatch = useDispatch();
-  const list = useSelector((state) => state.items.itemsList);
+  const list = useSelector(selectItem);
   const selected = (id) => {
     // console.log(id);
     dispatch(toggleSelectedOf(id));

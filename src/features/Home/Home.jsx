@@ -1,16 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-
+import { ActionCreators } from "redux-undo";
+// Components
 import { SecondaryButtonStyled } from "../Static/Styled/Buttons/SecondaryButtonStyled";
 import { PrimaryButtonStyled } from "../Static/Styled/Buttons/PrimaryButtonStyled";
 import { Icon } from "@iconify/react";
-
+import Items from "./ItemList/Items";
+// Reducers
 import { toggleIsOpen } from "../reducers/modalSlice";
 import { deleteSelected } from "../reducers/itemSlice.js";
-
+// Styles
 import "./HomeStyles.scss";
-import Items from "./ItemList/Items";
 
+/**
+ * ! HOME - Container
+ * * AslanSN - 22-07-02
+ *
+ *
+ */
 const Home = () => {
   const dispatch = useDispatch();
   const list = useSelector((state) => state.items.itemsList);
@@ -30,14 +37,27 @@ const Home = () => {
           </p>
         </header>
         <content>
-          <Items/>
+          <Items />
         </content>
         <footer>
           <span className="left">
-            <SecondaryButtonStyled className="first" width="4.5vmax">
+            <SecondaryButtonStyled
+              className="first"
+              aria-label="Undo last change"
+              width="4.5vmax"
+              onClick={() => dispatch(ActionCreators.undo())}>
               <Icon icon="la:undo-alt" color="#324bff" width="2vmin" />
             </SecondaryButtonStyled>
-            <SecondaryButtonStyled onClick={deletion}>DELETE</SecondaryButtonStyled>
+            <SecondaryButtonStyled
+              className="first"
+              aria-label="Redo last change"
+              width="4.5vmax"
+              onClick={() => dispatch(ActionCreators.redo())}>
+              <Icon icon="fad:redo" color="#324bff" width="2vmin" />
+            </SecondaryButtonStyled>
+            <SecondaryButtonStyled onClick={deletion}>
+              DELETE
+            </SecondaryButtonStyled>
           </span>
           <PrimaryButtonStyled onClick={toggleOpen}>ADD</PrimaryButtonStyled>
         </footer>
