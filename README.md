@@ -24,9 +24,9 @@ I had to mimic this app: [Technical Proof](https://xd.adobe.com/view/ea696dd0-87
 
 ### The app shall have an UI that, at least, have:
  1. A container where text strings will be added or deleted.
- 2. Una caja de entrada de texto, donde el usuario pueda escribir los textos que desee añadir a la lista.
- 3. Un botón para agregar nuevas entradas.
- 4. Un botón para eliminar de la lista.
+ 2. A form box where the user can write the text that desires to add to the list.
+ 3. A button to add new entries.
+ 4. A button to erase items from the list.
 
 ### The application must:
 - Add text entries, allow the user to type and add the text entry, to a listing. Empty entries cannot be added.
