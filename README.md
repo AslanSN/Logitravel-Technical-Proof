@@ -5,7 +5,9 @@
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm i`
+and then
+### `npm run`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -17,7 +19,8 @@ You may also see any lint errors in the console.
 
 For this app I used **HTML**, **CSS**, **SCSS**, **styled-components** and **JavaScript** with **React**, **Redux**, **Redux-Toolkit** and **Redux-Undo**.
 
-I had to mimic this app: [Technical Proof](https://xd.adobe.com/view/ea696dd0-8781-4460-8720-36deb2d19b2a-bf3a/).
+I had to mimic this app: [Technical Proof](https://xd.adobe.com/view/ea696dd0-8781-4460-8720-36deb2d19b2a-bf3a/). ![image](https://user-images.githubusercontent.com/90191991/181525863-d2418198-7b82-4572-b8aa-5f6dffb629b8.png)
+
 
 ### The app shall have an UI that, at least, have:
  1. A container where text strings will be added or deleted.
@@ -39,6 +42,9 @@ I used the 2 first days to have the least of the UI to be able to see the printi
 Then I moved forward to the "back" of the "front" using `redux`, `redux-toolkit` the best I could. Creating as Slices as I thought it would be precise. Comenting every reducer I should, and keeping the best I could the **SOLID** methodology.
 
 Also, thanks to the `redux-undo` dependency I achieved to even add a `REDO` button!
+
+![Logitravel finished test preview](https://user-images.githubusercontent.com/90191991/181550462-ffc1be0b-ef62-4234-94d3-289525604418.gif)
+
 
 So that's all,
 
