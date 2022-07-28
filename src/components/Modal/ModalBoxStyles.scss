@@ -24,6 +24,10 @@ card.modal-card {
       flex-direction: row;
       justify-content: flex-end;
       margin: 0.5rem 0 0 0;
+
+      button:first-child {
+        margin: 0 1rem 0 0;
+      }
     }
   }
 }
