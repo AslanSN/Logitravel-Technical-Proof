@@ -1,6 +1,10 @@
 # LogiTravel - PrimeIT technical proof
 ### By AslanSN
 
+> **2026 update** — I rebuilt this challenge from scratch as a senior-level exercise:
+> [string-list-manager](https://github.com/AslanSN/string-list-manager). This repository
+> stays untouched on purpose, so both can be read side by side as a before/after.
+
 ## How to run it
 
 In the project directory, you can run:
